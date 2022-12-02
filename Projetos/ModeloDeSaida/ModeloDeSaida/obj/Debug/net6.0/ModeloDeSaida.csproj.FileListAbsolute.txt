@@ -1,0 +1,15 @@
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.csproj.AssemblyReference.cache
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.GeneratedMSBuildEditorConfig.editorconfig
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.AssemblyInfoInputs.cache
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.AssemblyInfo.cs
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.csproj.CoreCompileInputs.cache
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\bin\Debug\net6.0\ModeloDeSaida.exe
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\bin\Debug\net6.0\ModeloDeSaida.deps.json
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\bin\Debug\net6.0\ModeloDeSaida.runtimeconfig.json
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\bin\Debug\net6.0\ModeloDeSaida.dll
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\bin\Debug\net6.0\ModeloDeSaida.pdb
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.dll
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\refint\ModeloDeSaida.dll
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.pdb
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ModeloDeSaida.genruntimeconfig.cache
+D:\SharpCoders\Projetos\ModeloDeSaida\ModeloDeSaida\obj\Debug\net6.0\ref\ModeloDeSaida.dll

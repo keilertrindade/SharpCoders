@@ -1,0 +1,15 @@
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\bin\Debug\net6.0\ImpressaoComValores.exe
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\bin\Debug\net6.0\ImpressaoComValores.deps.json
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\bin\Debug\net6.0\ImpressaoComValores.runtimeconfig.json
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\bin\Debug\net6.0\ImpressaoComValores.dll
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\bin\Debug\net6.0\ImpressaoComValores.pdb
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.csproj.AssemblyReference.cache
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.GeneratedMSBuildEditorConfig.editorconfig
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.AssemblyInfoInputs.cache
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.AssemblyInfo.cs
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.csproj.CoreCompileInputs.cache
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.dll
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\refint\ImpressaoComValores.dll
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.pdb
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ImpressaoComValores.genruntimeconfig.cache
+D:\SharpCoders\Projetos\ImpressaoComValores\ImpressaoComValores\obj\Debug\net6.0\ref\ImpressaoComValores.dll
