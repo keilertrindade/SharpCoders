@@ -1,0 +1,15 @@
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\bin\Debug\net6.0\Lanche_1038.exe
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\bin\Debug\net6.0\Lanche_1038.deps.json
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\bin\Debug\net6.0\Lanche_1038.runtimeconfig.json
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\bin\Debug\net6.0\Lanche_1038.dll
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\bin\Debug\net6.0\Lanche_1038.pdb
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.csproj.AssemblyReference.cache
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.GeneratedMSBuildEditorConfig.editorconfig
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.AssemblyInfoInputs.cache
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.AssemblyInfo.cs
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.csproj.CoreCompileInputs.cache
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.dll
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\refint\Lanche_1038.dll
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.pdb
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\Lanche_1038.genruntimeconfig.cache
+E:\GITS\SharpCoders\Beecrowd\Lanche_1038\Lanche_1038\obj\Debug\net6.0\ref\Lanche_1038.dll

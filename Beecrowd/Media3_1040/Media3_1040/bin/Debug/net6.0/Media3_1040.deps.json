@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Media3_1040/1.0.0": {
+        "runtime": {
+          "Media3_1040.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Media3_1040/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
