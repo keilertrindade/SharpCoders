@@ -1,0 +1,15 @@
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\bin\Debug\net6.0\AumentoDeSalario_1048.exe
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\bin\Debug\net6.0\AumentoDeSalario_1048.deps.json
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\bin\Debug\net6.0\AumentoDeSalario_1048.runtimeconfig.json
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\bin\Debug\net6.0\AumentoDeSalario_1048.dll
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\bin\Debug\net6.0\AumentoDeSalario_1048.pdb
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.csproj.AssemblyReference.cache
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.GeneratedMSBuildEditorConfig.editorconfig
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.AssemblyInfoInputs.cache
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.AssemblyInfo.cs
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.csproj.CoreCompileInputs.cache
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.dll
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\refint\AumentoDeSalario_1048.dll
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.pdb
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\AumentoDeSalario_1048.genruntimeconfig.cache
+D:\SharpCoders\Beecrowd\AumentoDeSalario_1048\AumentoDeSalario_1048\obj\Debug\net6.0\ref\AumentoDeSalario_1048.dll

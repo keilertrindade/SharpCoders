@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GITS\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj": {}
+    "D:\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj": {}
   },
   "projects": {
-    "E:\\GITS\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj": {
+    "D:\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GITS\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj",
+        "projectUniqueName": "D:\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj",
         "projectName": "Intervalo_1037",
-        "projectPath": "E:\\GITS\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj",
-        "packagesPath": "C:\\Users\\DEV\\.nuget\\packages\\",
-        "outputPath": "E:\\GITS\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\obj\\",
+        "projectPath": "D:\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\Intervalo_1037.csproj",
+        "packagesPath": "C:\\Users\\klrzn\\.nuget\\packages\\",
+        "outputPath": "D:\\SharpCoders\\Beecrowd\\Intervalo_1037\\Intervalo_1037\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DEV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\klrzn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

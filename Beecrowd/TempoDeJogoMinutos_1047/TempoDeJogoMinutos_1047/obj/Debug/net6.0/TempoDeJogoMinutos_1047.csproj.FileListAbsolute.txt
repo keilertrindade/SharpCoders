@@ -1,0 +1,15 @@
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\bin\Debug\net6.0\TempoDeJogoMinutos_1047.exe
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\bin\Debug\net6.0\TempoDeJogoMinutos_1047.deps.json
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\bin\Debug\net6.0\TempoDeJogoMinutos_1047.runtimeconfig.json
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\bin\Debug\net6.0\TempoDeJogoMinutos_1047.dll
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\bin\Debug\net6.0\TempoDeJogoMinutos_1047.pdb
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.csproj.AssemblyReference.cache
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.GeneratedMSBuildEditorConfig.editorconfig
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.AssemblyInfoInputs.cache
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.AssemblyInfo.cs
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.csproj.CoreCompileInputs.cache
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.dll
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\refint\TempoDeJogoMinutos_1047.dll
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.pdb
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\TempoDeJogoMinutos_1047.genruntimeconfig.cache
+D:\SharpCoders\Beecrowd\TempoDeJogoMinutos_1047\TempoDeJogoMinutos_1047\obj\Debug\net6.0\ref\TempoDeJogoMinutos_1047.dll

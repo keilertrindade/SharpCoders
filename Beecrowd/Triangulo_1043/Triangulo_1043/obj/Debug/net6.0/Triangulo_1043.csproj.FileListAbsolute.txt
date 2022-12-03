@@ -1,0 +1,15 @@
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\bin\Debug\net6.0\Triangulo_1043.exe
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\bin\Debug\net6.0\Triangulo_1043.deps.json
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\bin\Debug\net6.0\Triangulo_1043.runtimeconfig.json
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\bin\Debug\net6.0\Triangulo_1043.dll
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\bin\Debug\net6.0\Triangulo_1043.pdb
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.csproj.AssemblyReference.cache
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.GeneratedMSBuildEditorConfig.editorconfig
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.AssemblyInfoInputs.cache
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.AssemblyInfo.cs
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.csproj.CoreCompileInputs.cache
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.dll
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\refint\Triangulo_1043.dll
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.pdb
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\Triangulo_1043.genruntimeconfig.cache
+D:\SharpCoders\Beecrowd\Triangulo_1043\Triangulo_1043\obj\Debug\net6.0\ref\Triangulo_1043.dll
