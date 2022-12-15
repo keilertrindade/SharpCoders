@@ -43,3 +43,8 @@ public class HelloWorld
         
     }
 }
+
+
+Jogo da velha
+Menu cadastrando jogadores
+1- Adicionar jogadores [nome, pontuaçãototal]
