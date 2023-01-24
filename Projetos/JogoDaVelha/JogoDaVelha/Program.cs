@@ -79,17 +79,19 @@ namespace JogoDaVelha
             Console.Clear();
             mostrarCampo();
 
+
             if (vencedor == -1)
             {
                 Console.WriteLine("O jogo empatou!");
             }
-            else if( (vencedor - 1) % 2 == 1)
+            else if(jogadas % 2 == 1)
             {
-                Console.WriteLine($"Parabéns {jogador1.Nome} você venceu o jogo!");
-            }else if ((vencedor - 1) % 2 == 0)
+                Console.WriteLine($"Parabéns {jogador1.Nome} você venceu o jogo com {jogadas} jogadas!");
+            }else if (jogadas % 2 == 0)
             {
-                Console.WriteLine($"Parabéns {jogador2.Nome} você venceu o jogo!");
+                Console.WriteLine($"Parabéns {jogador2.Nome} você venceu o jogo com {jogadas} jogadas!");
             }
+            Console.WriteLine($"Em {jogadas} jogadas!");
         }
 
         private static void mostrarCampo()

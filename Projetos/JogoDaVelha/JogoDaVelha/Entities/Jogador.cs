@@ -3,6 +3,7 @@
     public class Jogador
     {
         public string Nome;
+        public int vitorias;
 
         public Jogador(string nome)
         {
