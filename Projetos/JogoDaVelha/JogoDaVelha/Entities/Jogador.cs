@@ -8,6 +8,12 @@
         public Jogador(string nome)
         {
             Nome = nome;
+            vitorias = 0;
+        }
+
+        public void Vitoria()
+        {
+            vitorias++;
         }
     }
 }
