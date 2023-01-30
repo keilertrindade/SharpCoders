@@ -38,7 +38,7 @@ namespace JogoDaVelha
             do
             {
                 PartidaJogoVelha();
-                Console.Write("\nDesejam jogar uma nova partida? ");
+                Console.Write("\nDesejam jogar uma nova partida? <s/n>");
                 novoJogo = Console.ReadLine();
 
                 if(novoJogo == "S" || novoJogo == "s")

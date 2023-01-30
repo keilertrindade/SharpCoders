@@ -10,24 +10,20 @@ namespace GameHub.Entities
     {
         public string nomeJogador { get; set; }
         public string senha { get; set; }
-        public int vitorias { get; set; }
+
+        public int vitoriasJogoDaVelha { get; set; }
+        public int partidasJogoDaVelha { get; set; }
         public int pontuacao { get; set; }
+
 
         public Jogador(string nome)
         {
             nomeJogador = nome;
-            vitorias = 0;
             pontuacao = 0;
         }
 
         public Jogador() { 
-        
-        
-        }
-
-        public void Vitoria()
-        {
-            vitorias++;
+       
         }
     }
 }

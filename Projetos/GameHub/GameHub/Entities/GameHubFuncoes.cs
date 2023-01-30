@@ -38,33 +38,6 @@ namespace GameHub.Entities
             Console.Write("Digite a opção desejada: ");
         }
 
-
-        /*  static void LoginUsuario(List<string> cpfs, List<string> senhas, List<string> titulares, List<double> saldos)
-          {
-              Console.Write("Digite o Login <Nome de usuário>: ");
-              string nomeUsuario = Console.ReadLine();
-              //int cpfIndex = cpfs.FindIndex(cpf => cpf == cpfParaLogin);
-              Console.Write("Digite a senha: ");
-              string senhaParaLogin = Console.ReadLine();
-
-              if (cpfIndex == -1)
-              {
-                  Console.WriteLine("USUÁRIO OU SENHA INVÁLIDOS!");
-              }
-              else
-              {
-                  if (senhas[cpfIndex] == senhaParaLogin)
-                  {
-                      Console.WriteLine($"Seja bem vindo {titulares[cpfIndex]}");
-                      //MenuUsuario(cpfIndex, cpfs, senhas, titulares, saldos);
-                  }
-                  else
-                  {
-                      Console.WriteLine("Usuário ou senha inválidos!");
-                  }
-              }
-          } */
-
         public void CadastrarUsuario(GerenciadorJSON gerenciadorJSON)
         {
             List<Jogador> jogadoresCadastrados;
@@ -91,6 +64,7 @@ namespace GameHub.Entities
 
             jogadoresCadastrados.Add(jogador);
             gerenciadorJSON.SalvarJogadores(jogadoresCadastrados);
+            gerenciadorJSON.AdicionarJogadorRankingJogoDaVelha(jogador);
 
         }
 
@@ -111,12 +85,13 @@ namespace GameHub.Entities
                 string nome = Console.ReadLine();
                 Console.Write("Digite a senha: ");
                 string senha = Console.ReadLine();
-                bool loginSucedido = false;
+                bool usuarioEncontrado = false;
 
                 for (int contador = 0; contador < jogadoresCadastrados.Count; contador++)
                 {
                     if (jogadoresCadastrados[contador].nomeJogador == nome)
                     {
+                        usuarioEncontrado = true;
                         if (jogadoresCadastrados[contador].senha == senha)
                         {
                             if (jogadoresLogados.Count == 0)
@@ -130,7 +105,6 @@ namespace GameHub.Entities
                                 jogadoresLogados.Add(Program.jogador2);
                             }
                             Console.WriteLine($"Bem vindo {nome}!");
-                            loginSucedido = true;
                             Console.ReadLine();
                         }
                         else
@@ -143,7 +117,7 @@ namespace GameHub.Entities
                     }
                 }
 
-                if (!loginSucedido)
+                if (!usuarioEncontrado)
                 {
                     Console.WriteLine("Usuário não cadastrado no sistema");
                     Console.ReadLine();
@@ -190,19 +164,34 @@ namespace GameHub.Entities
                     }
                 } while (option != 0);
             }
-
-            
-
         }
 
-        public void ExibirRankingJogoDaVelha()
+        public void ExibirRankingJogoDaVelha(GerenciadorJSON gerenciadorJSON)
         {
-
+            List<RankingJogoDaVelha> rankingJogoDaVelha = gerenciadorJSON.CarregarRankingJogoDaVelha();
+            for (int controlador = 0; controlador < rankingJogoDaVelha.Count; controlador++)
+            {
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine($"\t{controlador + 1} - {rankingJogoDaVelha[controlador].nomeJogador}" +
+                    $"\n\n\t{rankingJogoDaVelha[controlador].partidasVencidas} partidas vencidas" +
+                    $"\n\t{rankingJogoDaVelha[controlador].partidasJogadas} partidas jogadas");
+                Console.WriteLine("-------------------------------");
+            }
+            Console.ReadLine();
         }
 
-        public void ExibirRankingBatalhaNaval()
+        public void ExibirRankingBatalhaNaval(GerenciadorJSON gerenciadorJSON)
         {
-
+            List<RankingBatalhaNaval> rankingBatalhaNaval = gerenciadorJSON.CarregarRankingBatalhaNaval();
+            for(int controlador = 0; controlador < rankingBatalhaNaval.Count; controlador++) {
+                Console.WriteLine("-------------------------------");
+                Console.WriteLine($"\tData: {rankingBatalhaNaval[controlador].data}\n" +
+                    $"\tVencedor: {rankingBatalhaNaval[controlador].vencedor}" +
+                    $"\n\tPontos: {rankingBatalhaNaval[controlador].pontosVencedor} pontos" +
+                    $"\n\tOponente: {rankingBatalhaNaval[controlador].oponente}");
+                Console.WriteLine("-------------------------------");
+            }
+            Console.ReadLine();
         }
 
         public void IniciarJogoDaVelha(Jogador jogador1, Jogador jogador2)
@@ -214,8 +203,17 @@ namespace GameHub.Entities
 
         public void IniciarBatalhaNaval(Jogador jogador1, Jogador jogador2)
         {
+            jogador1.pontuacao = jogador2.pontuacao = 0;
             controladorBatalhaNaval novoBatalhaNaval = new controladorBatalhaNaval(jogador1, jogador2);
             novoBatalhaNaval.IniciarJogo(jogador1,jogador2);
+
+           /* Random rand = new Random();
+            jogador1.pontuacao = rand.Next(10, 200);
+            jogador2.pontuacao = rand.Next(10,200);
+
+            BatalhaNaval testeRanking = new BatalhaNaval();
+            testeRanking.EncerrarJogo(jogador1, jogador2);*/
+
         }
 
 

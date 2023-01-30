@@ -59,9 +59,9 @@ namespace GameHub.Entities
 
         public void Encerrar()
         {
-            Console.WriteLine($"\nSequência de partidas finalizou com as seguintes estátisticas: \n" +
-                $"{jogoVelha.partidas} partidas \n{jogador1.nomeJogador}: {jogador1.vitorias} vitórias.\n" +
-                $"{jogador2.nomeJogador}: {jogador2.vitorias} vitórias.");
+            /*Console.WriteLine($"\nSequência de partidas finalizou com as seguintes estátisticas: \n" +
+                $"{jogoVelha.partidas} partidas \n{jogador1.nomeJogador}: {jogador1.vitoriasJogoDaVelha} vitórias totais.\n" +
+                $"{jogador2.nomeJogador}: {jogador2.vitoriasJogoDaVelha} vitórias totais."); */
             Console.ReadLine();
         }
     }

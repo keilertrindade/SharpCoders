@@ -48,7 +48,6 @@ namespace GameHub.Entities
             linhaChar = coordenadaInicial[0];
             colunaChar = coordenadaInicial[1];
 
-
             for (int contador = 0; contador < naviosJogo[indiceNavio].tamanho; contador++)
             {
                 if (posicao == "vertical")
@@ -71,7 +70,7 @@ namespace GameHub.Entities
 
         public void PovoarCampo(List<Navio> naviosJogo)
         {
-            string coordenadaInicial, coordenada, posicao;
+            string coordenadaInicial, posicao;
             bool espacosLiberados;
 
 
@@ -96,8 +95,6 @@ namespace GameHub.Entities
         {
             int linha = ((int)coordenadaInicial[0]);// - 65;  //A -> J
             int coluna = ((int)coordenadaInicial[1]);// - 48; //0 -> 9
-
-            bool retorno = true;
 
             if (posicao == "vertical")
             {          
@@ -337,9 +334,8 @@ namespace GameHub.Entities
                     {
 
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"{jogador.nomeJogador} acertou uma embarcação e portanto jogará novamente!");
+                        Console.WriteLine($"{jogador.nomeJogador} acertou uma embarcação!");
                         Console.ResetColor();
-                        //Thread.Sleep(500);
 
                         naviosJogo[i].partesAfundadas++;
                         naviosJogo[i].coordenadasPosicoes.Remove(coordenada);
@@ -374,20 +370,46 @@ namespace GameHub.Entities
 
         public void EncerrarJogo(Jogador jogador1, Jogador jogador2)
         {
-            
-            if(jogador1.pontuacao > jogador2.pontuacao)
+            ExibirCampo();
+            ExibirPontuacaoJogadores(jogador1, jogador2);
+            Console.WriteLine();
+            if (jogador1.pontuacao > jogador2.pontuacao)
             {
                 Console.WriteLine($"{jogador1.nomeJogador} ganhou o jogo!");
+                AtualizarRanking(jogador1, jogador2);
 
             }
             if (jogador1.pontuacao < jogador2.pontuacao)
             {
                 Console.WriteLine($"{jogador2.nomeJogador} ganhou o jogo!");
-
+                AtualizarRanking(jogador2, jogador1);
             }
 
-            Console.WriteLine("Jogo encerrado");
             Console.ReadLine();
         }
+
+        public void AtualizarRanking(Jogador jogadorVencedor, Jogador jogadorOponente)
+        {
+            DateTime data = DateTime.Now;
+            GerenciadorJSON gerenciadorJSON = new GerenciadorJSON();
+            List<RankingBatalhaNaval> rankingBatalhaNaval = gerenciadorJSON.CarregarRankingBatalhaNaval();
+            RankingBatalhaNaval partida = new RankingBatalhaNaval();
+            partida.data = data;
+            partida.vencedor = jogadorVencedor.nomeJogador;
+            partida.pontosVencedor = jogadorVencedor.pontuacao;
+            partida.oponente = jogadorOponente.nomeJogador;
+
+            
+             rankingBatalhaNaval.Add(partida);
+             rankingBatalhaNaval.Sort(delegate (RankingBatalhaNaval x, RankingBatalhaNaval y)
+             {
+                 return x.pontosVencedor.CompareTo(y.pontosVencedor);
+             });
+            rankingBatalhaNaval.Reverse();
+            gerenciadorJSON.SalvarRankingBatalhaNaval(rankingBatalhaNaval);
+
+        }
+
+
     }
 }

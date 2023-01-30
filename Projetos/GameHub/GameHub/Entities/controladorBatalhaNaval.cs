@@ -10,7 +10,7 @@ namespace GameHub.Entities
     {
         BatalhaNaval batalhaNaval;
         Jogador jogador1, jogador2;
-        int controladorVezJogador = 0;
+
 
         public controladorBatalhaNaval(Jogador jogador1, Jogador jogador2)
         {
@@ -68,7 +68,6 @@ namespace GameHub.Entities
                 }
                 Console.WriteLine();
                 batalhaNaval.ExibirPontuacaoJogadores(jogador1, jogador2);
-                //Console.ReadLine();
 
                 if (batalhaNaval.jogadordaVez % 2 == 1)
                 {
@@ -79,7 +78,7 @@ namespace GameHub.Entities
                     batalhaNaval.ValidarBomba(jogador2, navios);
                 }
             } while(batalhaNaval.emAndamento);
-
+            Console.Clear();
             batalhaNaval.EncerrarJogo(jogador1, jogador2);
         }
     }

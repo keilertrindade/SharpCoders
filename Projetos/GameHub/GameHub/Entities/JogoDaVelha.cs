@@ -131,16 +131,52 @@ namespace GameHub.Entities
             {
                 if (jogadas % 2 == 1)
                 {
-                    Console.WriteLine($"Parabéns {jogador1.nomeJogador} você venceu o jogo com {jogadas} jogadas!");
-                    jogador1.Vitoria();
+                    Console.WriteLine($"Parabéns {jogador1.nomeJogador} você venceu o jogo em {jogadas} jogadas!");
+                    AtualizarRanking(jogador1, jogador2);
                 }
                 else
                 {
-                    Console.WriteLine($"Parabéns {jogador2.nomeJogador} você venceu o jogo com {jogadas} jogadas!");
-                    jogador2.Vitoria();
+                    Console.WriteLine($"Parabéns {jogador2.nomeJogador} você venceu o jogo em {jogadas} jogadas!");
+                    AtualizarRanking(jogador2, jogador1);
                 }
             }
 
+        }
+
+        public void AtualizarRanking(Jogador jogadorVencedor, Jogador jogadorOponente)
+        {
+            DateTime data = DateTime.Now;
+            GerenciadorJSON gerenciadorJSON = new GerenciadorJSON();
+            List<RankingJogoDaVelha> rankingJogoDaVelha = gerenciadorJSON.CarregarRankingJogoDaVelha();
+            RankingJogoDaVelha partida = new RankingJogoDaVelha();
+
+            for(int contador = 0; contador < rankingJogoDaVelha.Count; contador++) {
+                if (rankingJogoDaVelha[contador].nomeJogador == jogadorVencedor.nomeJogador)
+                {
+                    rankingJogoDaVelha[contador].partidasJogadas++;
+                    rankingJogoDaVelha[contador].partidasVencidas++;
+                    break;
+                }
+            
+            }
+
+            for (int contador = 0; contador < rankingJogoDaVelha.Count; contador++)
+            {
+                if (rankingJogoDaVelha[contador].nomeJogador == jogadorOponente.nomeJogador)
+                {
+                    rankingJogoDaVelha[contador].partidasJogadas++;
+                    break;
+                }
+
+            }
+
+            rankingJogoDaVelha.Sort(delegate (RankingJogoDaVelha x, RankingJogoDaVelha y)
+            {
+                return x.partidasVencidas.CompareTo(y.partidasVencidas);
+            });
+
+            rankingJogoDaVelha.Reverse();
+            gerenciadorJSON.SalvarRankingJogoDaVelha(rankingJogoDaVelha);
         }
 
         public void RedefinirTabuleiro()
