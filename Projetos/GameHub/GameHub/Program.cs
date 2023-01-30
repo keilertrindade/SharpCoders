@@ -23,8 +23,8 @@ namespace GameHub{
             jogador1 = new Jogador("Keiler");
             jogador2 = new Jogador("Trindade");
 
-            jogadoresLogados.Add(jogador1);
-            jogadoresLogados.Add(jogador2);
+            //jogadoresLogados.Add(jogador1);
+            //jogadoresLogados.Add(jogador2);
 
 
             do
@@ -38,10 +38,10 @@ namespace GameHub{
                         Console.WriteLine("Estou encerrando o programa...");
                         break;
                     case 1:
-                        controladorGameHub.CadastrarUsuario();
+                        controladorGameHub.CadastrarUsuario(gerenciadorJSON);
                         break;
                     case 2:
-                        controladorGameHub.LoginUsuario(jogadoresLogados);
+                        controladorGameHub.LoginUsuario(jogadoresLogados, gerenciadorJSON);
                         break;
                     case 3:
                         controladorGameHub.AcessarMenuJogos(jogadoresLogados, jogador1, jogador2);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,13 +15,30 @@ namespace GameHub.Entities
 
         }
 
-        public void CarregarJogadores()
+        public List<Jogador> CarregarJogadores()
         {
+            List<Jogador> jogadoresCadastrados = new List<Jogador>();
 
+            using (StreamReader r = new StreamReader("CadastroJogadores.json"))
+            {
+                string json = r.ReadToEnd();
+                jogadoresCadastrados = JsonSerializer.Deserialize<List<Jogador>>(json);
+            }
+
+            return jogadoresCadastrados;
         }
 
-        public void SalvarJogadores()
+        public void SalvarJogadores(List<Jogador> jogadoresCadastrados)
         {
+
+            string jsonString = JsonSerializer.Serialize(jogadoresCadastrados, new JsonSerializerOptions() { WriteIndented = true });
+            using (StreamWriter outputFile = new StreamWriter("CadastroJogadores.json"))
+            {
+                outputFile.WriteLine(jsonString);
+            }
+
+            Console.WriteLine("Usuário cadastrado com sucesso!");
+            Console.ReadLine();
 
         }
 

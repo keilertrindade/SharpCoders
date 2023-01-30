@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace GameHub.Entities
@@ -63,34 +65,95 @@ namespace GameHub.Entities
               }
           } */
 
-        public void CadastrarUsuario()
+        public void CadastrarUsuario(GerenciadorJSON gerenciadorJSON)
         {
+            List<Jogador> jogadoresCadastrados;
+            jogadoresCadastrados = gerenciadorJSON.CarregarJogadores();
+
+            Console.Write("Digite o nome de usuário: ");
+            string nome = Console.ReadLine();
+
+             for(int contador = 0; contador < jogadoresCadastrados.Count; contador++)
+            {
+                if (jogadoresCadastrados[contador].nomeJogador == nome)
+                {
+                    Console.WriteLine("Usuário já cadastrado no sistema");
+                    Console.ReadLine();
+                    break;
+                }
+            }
+
+            Console.Write("Digite a senha do usuário: ");
+            string senha = Console.ReadLine();
+
+            Jogador jogador = new Jogador(nome);
+            jogador.senha = senha;
+
+            jogadoresCadastrados.Add(jogador);
+            gerenciadorJSON.SalvarJogadores(jogadoresCadastrados);
 
         }
 
-        public void LoginUsuario(List<Jogador> jogadores)
+        public void LoginUsuario(List<Jogador> jogadoresLogados, GerenciadorJSON gerenciadorJSON)
         {
-            if (jogadores.Count == 2)
+            if (jogadoresLogados.Count == 2)
             {
-                Console.WriteLine($"O sistema já possui dois jogadores logados: {jogadores[0].nomeJogador} e {jogadores[1].nomeJogador}");
+                Console.WriteLine($"O sistema já possui dois jogadores logados: {jogadoresLogados[0].nomeJogador} e {jogadoresLogados[1].nomeJogador}");
                 Console.ReadLine();
+
+            }
+            else
+            {
+
+                List<Jogador> jogadoresCadastrados;
+                jogadoresCadastrados = gerenciadorJSON.CarregarJogadores();
+                Console.Write("Digite o nome do usuário: ");
+                string nome = Console.ReadLine();
+                Console.Write("Digite a senha: ");
+                string senha = Console.ReadLine();
+                bool loginSucedido = false;
+
+                for (int contador = 0; contador < jogadoresCadastrados.Count; contador++)
+                {
+                    if (jogadoresCadastrados[contador].nomeJogador == nome)
+                    {
+                        if (jogadoresCadastrados[contador].senha == senha)
+                        {
+                            if (jogadoresLogados.Count == 0)
+                            {
+                                Program.jogador1 = new Jogador(nome);
+                                jogadoresLogados.Add(Program.jogador1);
+                            }
+                            else if (jogadoresLogados.Count == 1)
+                            {
+                                Program.jogador2 = new Jogador(nome);
+                                jogadoresLogados.Add(Program.jogador2);
+                            }
+                            Console.WriteLine($"Bem vindo {nome}!");
+                            loginSucedido = true;
+                            Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Usuário ou senha incorretos!");
+                            Console.ReadLine();
+                        }
+
+                        break;
+                    }
+                }
+
+                if (!loginSucedido)
+                {
+                    Console.WriteLine("Usuário não cadastrado no sistema");
+                    Console.ReadLine();
+                }
                 
+
+
             }
 
-            if(jogadores.Count == 0)
-            {
-                Console.Write("Digite nome do jogador 1: ");
-                string nome = Console.ReadLine();
-                Program.jogador1 = new Jogador(nome);
-                jogadores.Add(Program.jogador1);
-            }
-            else if (jogadores.Count == 1)
-            {
-                Console.Write("Digite nome do jogador 2: ");
-                string nome = Console.ReadLine();
-                Program.jogador2 = new Jogador(nome);
-                jogadores.Add(Program.jogador2);
-            }
+            
         }
 
         public void Logoff(List<Jogador> jogadoresLogados)
