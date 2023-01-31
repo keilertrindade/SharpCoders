@@ -14,7 +14,7 @@ namespace GameHub{
 
         public static void Main(string[] args) {
 
-            int option;
+            int option = 9;
             List<Jogador> jogadoresLogados = new List<Jogador>();
             GameHubFuncoes controladorGameHub = new GameHubFuncoes();
             GerenciadorJSON gerenciadorJSON = new GerenciadorJSON();
@@ -22,12 +22,20 @@ namespace GameHub{
             do
             {
                 controladorGameHub.ShowMenu();
-                option = int.Parse(Console.ReadLine());
+                try
+                {
+                    option = int.Parse(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Digite apenas números!");
+                    Console.ReadKey();
+                }
 
-                switch(option)
+                switch (option)
                 {
                     case 0:
-                        Console.WriteLine("Estou encerrando o programa...");
+                        Console.WriteLine("Finalizando programa...");
                         break;
                     case 1:
                         controladorGameHub.CadastrarUsuario(gerenciadorJSON);

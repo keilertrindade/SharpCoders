@@ -318,7 +318,7 @@ namespace GameHub.Entities
                 Console.ForegroundColor= ConsoleColor.Red;
                 Console.WriteLine($"{jogador.nomeJogador} acertou a água!");
                 Console.ResetColor();
-                Console.ReadLine();
+                Console.ReadKey();
                 tabuleiro[linha, coluna] = 'x';
                 jogadordaVez++;
             }
@@ -347,7 +347,7 @@ namespace GameHub.Entities
                             jogador.pontuacao += naviosJogo[i].pontuacao;
                             Console.WriteLine($"{jogador.nomeJogador} derrubou uma embarcacao do tipo {naviosJogo[i].tipo}. Recebeu " +
                                 $"{naviosJogo[i].pontuacao} pontos!");
-                            Console.ReadLine();
+                            Console.ReadKey();
                             VerificarAndamentoJogo();
                         }
                         break;
@@ -385,7 +385,7 @@ namespace GameHub.Entities
                 AtualizarRanking(jogador2, jogador1);
             }
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         public void AtualizarRanking(Jogador jogadorVencedor, Jogador jogadorOponente)

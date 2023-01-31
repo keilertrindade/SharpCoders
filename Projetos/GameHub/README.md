@@ -8,20 +8,22 @@ Atividade realizada no projeto Imã Sharpcoders
 - [x] Cadastro e Login/Logoff de usuários com persistência dos dados.
 - [x] Ranking de vitórias em partidas no Jogo da Velha, ordenado pelo maior número.
 - [x] Persistência de partidas do jogo 'Batalha Naval' ordenada pela maior pontuação do vencedor.
+- [ ] Jogo de Xadrez
 
 ## :wrench: Tecnologias utilizadas
 * [C#](https://learn.microsoft.com/pt-br/dotnet/csharp/)
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
+Para rodar a aplicação é necessário realizar o download dela, abrir o projeto e dar builld:
 ```
-<linha de comando>
-
+https://github.com/keilertrindade/SharpCoders/tree/main/Projetos/GameHub
 ```
 
-## :soon: Implementação futura
+## :soon: Implementações futuras
 * Jogo de Xadrez
 * Ranking Jogo de Xadrez
+* Melhorias de qualidade de vida da aplicação
+* Melhorias de qualidade de código
 
 ## :handshake: Colaboradores
 <table>

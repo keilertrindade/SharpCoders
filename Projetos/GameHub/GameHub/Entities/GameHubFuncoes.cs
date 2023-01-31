@@ -105,12 +105,12 @@ namespace GameHub.Entities
                                 jogadoresLogados.Add(Program.jogador2);
                             }
                             Console.WriteLine($"Bem vindo {nome}!");
-                            Console.ReadLine();
+                            Console.ReadKey();
                         }
                         else
                         {
                             Console.WriteLine("Usuário ou senha incorretos!");
-                            Console.ReadLine();
+                            Console.ReadKey();
                         }
 
                         break;
@@ -120,7 +120,7 @@ namespace GameHub.Entities
                 if (!usuarioEncontrado)
                 {
                     Console.WriteLine("Usuário não cadastrado no sistema");
-                    Console.ReadLine();
+                    Console.ReadKey();
                 }
                 
 
@@ -137,18 +137,25 @@ namespace GameHub.Entities
 
         public void AcessarMenuJogos(List<Jogador> jogadoresLogados, Jogador jogador1, Jogador jogador2)
         {
-            int option;
+            int option = 9;
             if(jogadoresLogados.Count < 2)
             {
                 Console.WriteLine("Você precisa ter dois jogadores logados para acessar o menu de jogos!");
-                Console.ReadLine();
+                Console.ReadKey();
             }
             else
             {
                 do
                 {
                     ShowMenuJogos(jogadoresLogados);
-                    option = int.Parse(Console.ReadLine());
+                    try
+                    {
+                        option = int.Parse(Console.ReadLine());
+                    }catch(Exception ex) {
+                        Console.WriteLine("Digite apenas números!");
+                        Console.ReadKey();
+                    }
+
 
                     switch (option)
                     {
@@ -169,6 +176,7 @@ namespace GameHub.Entities
         public void ExibirRankingJogoDaVelha(GerenciadorJSON gerenciadorJSON)
         {
             List<RankingJogoDaVelha> rankingJogoDaVelha = gerenciadorJSON.CarregarRankingJogoDaVelha();
+            if (rankingJogoDaVelha.Count == 0) { Console.WriteLine("Ranking vazio!"); Console.ReadKey(); return; }
             for (int controlador = 0; controlador < rankingJogoDaVelha.Count; controlador++)
             {
                 Console.WriteLine("-------------------------------");
@@ -177,12 +185,15 @@ namespace GameHub.Entities
                     $"\n\t{rankingJogoDaVelha[controlador].partidasJogadas} partidas jogadas");
                 Console.WriteLine("-------------------------------");
             }
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         public void ExibirRankingBatalhaNaval(GerenciadorJSON gerenciadorJSON)
         {
             List<RankingBatalhaNaval> rankingBatalhaNaval = gerenciadorJSON.CarregarRankingBatalhaNaval();
+
+            if (rankingBatalhaNaval.Count == 0) { Console.WriteLine("Ranking vazio!"); Console.ReadKey(); return;}
+
             for(int controlador = 0; controlador < rankingBatalhaNaval.Count; controlador++) {
                 Console.WriteLine("-------------------------------");
                 Console.WriteLine($"\tData: {rankingBatalhaNaval[controlador].data}\n" +
@@ -191,7 +202,7 @@ namespace GameHub.Entities
                     $"\n\tOponente: {rankingBatalhaNaval[controlador].oponente}");
                 Console.WriteLine("-------------------------------");
             }
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         public void IniciarJogoDaVelha(Jogador jogador1, Jogador jogador2)

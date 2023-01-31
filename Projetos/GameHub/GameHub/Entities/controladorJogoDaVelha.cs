@@ -23,7 +23,7 @@ namespace GameHub.Entities
             do
               {
                 this.Partida();
-                Console.Write("\nDesejam jogar uma nova partida? ('s' para sim, qualquer outro botão saíra)");
+                Console.Write("\nDesejam jogar uma nova partida? (Apenas 's' para sim!)");
                 novoJogo = Console.ReadLine();
 
                 if (novoJogo == "S" || novoJogo == "s")
@@ -62,7 +62,7 @@ namespace GameHub.Entities
             /*Console.WriteLine($"\nSequência de partidas finalizou com as seguintes estátisticas: \n" +
                 $"{jogoVelha.partidas} partidas \n{jogador1.nomeJogador}: {jogador1.vitoriasJogoDaVelha} vitórias totais.\n" +
                 $"{jogador2.nomeJogador}: {jogador2.vitoriasJogoDaVelha} vitórias totais."); */
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
