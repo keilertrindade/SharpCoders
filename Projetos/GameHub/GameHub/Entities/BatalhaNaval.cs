@@ -214,6 +214,7 @@ namespace GameHub.Entities
 
         public void ExibirCampo()
         {
+            
             for (int i = 0; i < vetorCoordenadas.Length; i++)
             {
 
@@ -347,9 +348,10 @@ namespace GameHub.Entities
                             jogador.pontuacao += naviosJogo[i].pontuacao;
                             Console.WriteLine($"{jogador.nomeJogador} derrubou uma embarcacao do tipo {naviosJogo[i].tipo}. Recebeu " +
                                 $"{naviosJogo[i].pontuacao} pontos!");
-                            Console.ReadKey();
+                            
                             VerificarAndamentoJogo();
                         }
+                        Console.ReadKey();
                         break;
                     }
                 }

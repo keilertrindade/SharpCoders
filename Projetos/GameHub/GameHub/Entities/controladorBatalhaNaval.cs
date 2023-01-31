@@ -60,13 +60,13 @@ namespace GameHub.Entities
             {
                 Console.Clear();
                 batalhaNaval.ExibirCampo();
-                Console.WriteLine();
+                /*Console.WriteLine();
 
                 for (int i = 0; i < batalhaNaval.coordenadasNavios.Count; i++)
                 {
                     Console.Write($"[{batalhaNaval.coordenadasNavios[i]}] ");
                 }
-                Console.WriteLine();
+                Console.WriteLine();*/
                 batalhaNaval.ExibirPontuacaoJogadores(jogador1, jogador2);
 
                 if (batalhaNaval.jogadordaVez % 2 == 1)
