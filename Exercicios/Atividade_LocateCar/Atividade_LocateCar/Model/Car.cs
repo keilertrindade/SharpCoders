@@ -12,5 +12,7 @@
             Placa = placa;
             Marca = marca;
         }
+
+        public Car() { }
     }
 }

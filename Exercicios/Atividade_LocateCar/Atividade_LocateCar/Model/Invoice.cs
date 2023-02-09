@@ -18,5 +18,11 @@
             BasicPayment = basicPayment;
             Tax = tax;
         }
+
+        public override string ToString()
+        {
+            return $"Pag. Base: R$ {BasicPayment:F2} | Taxa: {Tax:F2}\n" +
+                $"Total Pago: R$ {TotalPayment:F2}";
+        }
     }
 }
