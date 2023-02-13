@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Website</title>
+    <style>
+        *{
+            background-color: #302442;
+            color: #d2bee0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.1em;
+        }
+        .form-field{
+            margin: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+<main>
+    <h1>Titulo</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sequi quisquam dolore error, illum laboriosam adipisci nesciunt officia officiis itaque deleniti deserunt neque nobis enim aspernatur quis maiores. Eos, amet!
+    </p>
+</main>
+<form method="post">
+    <div id="user-form-field">
+    <label for="usuario-field">Usuário</label>
+    <input type="text" id="usuario" name="usuario-field" placeholder="seu user aqui!"   required>
+</div>
+<div id="about-form-field" class="form-field">
+    <label for="about-field">Sobre você</label>
+    <textarea name="about-field">Fale um pouco mais sobre você.
+    </textarea>
+</div>
+<div id="state-form-field" class="form-field">
+    <label for="state-field" class="state-field">Seu Estado</label>
+    <select name="state-field">
+        <option value="RJ" class="op">RJ</option>
+        <option value="SP" class="op">SP</option>
+        <option value="MG" class="op">MG</option>
+        <option value="BH" class="op">BH</option>
+        <option value="ES" class="op">ES</option>
+    </select>
+</div>
+<div  id="seniority-form-field"   class="form-field">
+    <label for="seniority-field">Você é dev senior</label>
+    <input type="radio" name="seniority-field" value="Sim" class="radio-option"> <label for="seniority-field">Sim</label>
+    <input type="radio" name="seniority-field" value="Não" class="radio-option"> <label for="seniority-field">Não</label>
+</div>
+<div id="technologies-form-field" class="form-field">
+    <label for="technologies-field">Quais tecnologias você conhece?</label>
+    <input type="checkbox" name="tech-field" value="Cpp" class="radio-option"> <label for="tech-field">C++</label>
+
+    <input type="checkbox" name="tech-field" value="Cpp" class="radio-option"> <label for="tech-field">Javascript</label>
+
+    <input type="checkbox" name="tech-field" value="Cpp" class="radio-option"> <label for="tech-field">C#</label>
+
+    <input type="checkbox" name="tech-field" value="Cpp" class="radio-option"> <label for="tech-field">Python</label>
+
+</div>
+
+
+
+
+</form>
+
+
+</body>
+</html>
