@@ -1,0 +1,111 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    display: flex;
+    background: linear-gradient(115.97deg, #9019ED 4.98%, rgba(192, 12, 255, 0.72312) 30.42%, rgba(144, 25, 237, 0.412458) 58.97%, rgba(192, 12, 255, 0) 96.09%);
+    width: 1280px;
+    height: 720px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator-body{
+    width: 563px;
+    height: 640px;
+    background-color: black;
+    box-shadow: 0px 133px 394px rgba(203, 167, 167, 0.07), 0px 55.5642px 164.604px rgba(203, 167, 167, 0.052077), 0px 29.7073px 88.0051px rgba(203, 167, 167, 0.0453859), 0px 16.6537px 49.3349px rgba(203, 167, 167, 0.0402089), 0px 8.84464px 26.2014px rgba(203, 167, 167, 0.0344048), 0px 3.68045px 10.903px rgba(203, 167, 167, 0.0255039);
+    border-radius: 57px;
+}
+
+#calculator-top-text{
+    color: white;
+    
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#display{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    
+}
+
+#last-operation{
+
+    align-self: flex-end;
+    font-size: 18px;
+
+}
+
+#result{
+
+    align-self: flex-end;
+    font-size: 45px;
+}
+
+
+#result-icon{
+    font-size: 90px;
+    
+}
+
+
+#calculator-buttons{
+
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.row-buttons{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row-buttons-last{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+button{
+    
+    font-size: large;
+}
+
+.zero-button{
+    width: 142px;
+    height: 70px;
+    background: #8A8080;
+    border-radius: 20px;
+}
+
+.normal-button{
+    width: 80px;
+    height: 70px;
+    border-radius: 20px;    
+}
+
+.orange-button{
+    width: 80px;
+    height: 70px;
+
+    background: #FF9A62;
+    border-radius: 20px;
+
+    border-radius: 20px;
+}
