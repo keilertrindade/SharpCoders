@@ -92,6 +92,7 @@ button{
     height: 70px;
     background: #8A8080;
     border-radius: 20px;
+    flex: 0.57;
 }
 
 .normal-button{
