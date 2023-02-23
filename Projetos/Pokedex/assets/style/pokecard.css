@@ -1,0 +1,133 @@
+main{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+#pokemon-image{
+    width: 32%;
+    height: 70%;
+
+    display: flex;
+    
+}
+
+#pokemon-image img{
+    width: 22.813em;
+    height: 22.813em;
+    margin: auto;
+    
+}
+
+
+#pokemon-infos{
+    width: 32%;
+    height: 70%;
+    color: white;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+#pokemon-name{
+    
+}
+
+#pokemon-description{
+    width: 19.375em;
+    font-size: 1.250em;
+}
+
+#pokemon-types-section{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+
+
+    align-items: space-around;
+    justify-content: space-evenly;
+}
+
+#pokemon-types{
+    display: flex;
+}
+
+#pokemon-weakness-section{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+
+
+    align-items: space-around;
+    justify-content: space-evenly;
+}
+
+#pokemon-weakness{
+    display: flex;
+    
+}
+
+.card-type{
+    width: 5.938em;
+    height: 1.750em;
+    
+    background-color: #d9d9d9;
+}
+
+#pokemon-stats{
+    width: 32%;
+    height: 70%;
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#pokemon-stats-informations{
+    background-color: #d9d9d9;
+    height: 47%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pokemon-stats-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 33%;
+    width: 100%;
+/*     background-color: rgb(211, 126, 23);
+ */
+}
+
+.stats-name{
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.stats-value{
+    font-weight: bolder;
+}
+
+.stats-value-gender{
+    display: flex;
+}
+
+
+#pokemon-stats-graph{
+    background-color: antiquewhite;
+    height: 47%;
+}
+

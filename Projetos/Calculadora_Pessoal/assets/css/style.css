@@ -110,3 +110,7 @@ button{
 
     border-radius: 20px;
 }
+
+.orange-button:hover{
+    background: #ff9962c2;
+}
