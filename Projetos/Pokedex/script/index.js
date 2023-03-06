@@ -4,12 +4,15 @@ function generateRandomPokemonID(){
     return Math.floor(Math.random() * 1011);
 }
 
+function captlizePokemonName(pokemonName){
+    return pokemonName[0].toUpperCase() + pokemonName.substring(1);
+}
+
 function getInformationsPokemon(pokemonURL){
 let informationPokemon = fetch(pokemonURL)
 .then((resp) => resp.json())
 .then(function (data) {
-    
-    //console.log(data);
+
     return data;
     
 })
@@ -22,30 +25,58 @@ let informationPokemon = fetch(pokemonURL)
 return informationPokemon;
 }
 
-function populatePokemonCard(pokemonInformations, cardId){
-    pokemonInformations.then(valor => {
-        var pokemoncard = document.getElementById(cardId);
-        //pokemoncard.children[0].setAttribute('src',valor.sprites.other.home.front_default)
-        
-        pokemoncard.children[1].children[0].innerHTML = valor.name.toUpperCase();
-        pokemoncard.children[1].children[1].innerHTML = 'Nº: '+ valor.id;
+function createArrayPokemons(){
 
-            
-        console.log(pokemoncard.children[1].children[1]);
-        //console.log(valor.sprites.other.home.front_default)
+let arrayPokemonInformations = [];
 
-    })
-    
+let pokemonURL = baseURL + generateRandomPokemonID();
+let pokemonJson = getInformationsPokemon(pokemonURL);
+arrayPokemonInformations.push(pokemonJson);
 
 
+pokemonURL = baseURL + generateRandomPokemonID();
+pokemonJson = getInformationsPokemon(pokemonURL);
+arrayPokemonInformations.push(pokemonJson);
 
-
+return arrayPokemonInformations;
 }
 
+function openDetailsPage(pokemonName){
+    alert(pokemonName);
+}
 
-const pokemonURL = baseURL + generateRandomPokemonID();
+function populatePokemonCards(){
+    
+    let pokemonInformations = createArrayPokemons();
 
-let pokemon = getInformationsPokemon(pokemonURL)
+    if (pokemonInformations.length === 2){
+        var cards = document.getElementsByClassName("pokemon-card");
+        for(let pokecard = 0; pokecard < pokemonInformations.length; pokecard++){
+            pokemonInformations[pokecard].then(valor => {
+                     cards[pokecard].querySelector('.pokemon-card-image').setAttribute('src',valor.sprites.other["official-artwork"].front_default);
+        
+                    cards[pokecard].querySelector('.pokemon-card-pokedex-number').innerHTML = 'Número: '+ valor.id;
+        
+                    cards[pokecard].querySelector('.pokemon-name').innerHTML =  captlizePokemonName(valor.name);
+                    
+                    var divPokemonCardType = cards[pokecard].querySelector('.pokemon-card-types')
+        
+                    for(let typeCount = 0; typeCount < valor.types.length; typeCount++){
+                        var pokemonTypeImg = document.createElement('img')
+                        pokemonTypeImg.classList.add('card-type')
+                        var pokemonType = valor.types[typeCount].type.name;
+                        
+                        pokemonTypeImg.src="assets/img/pokemon-type-cards/" + pokemonType + ".png";
+                        
+                        divPokemonCardType.appendChild(pokemonTypeImg)
+                    }
 
+                    cards[pokecard].addEventListener("click", function(){
+                        openDetailsPage(valor.name);
+                    })
+            })
+       }
+    }   
+}
 
-populatePokemonCard(pokemon, 'pokemon-card-1')
+populatePokemonCards()

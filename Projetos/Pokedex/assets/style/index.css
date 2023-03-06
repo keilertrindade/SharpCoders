@@ -70,7 +70,7 @@ main{
 
 
 #inferior-panel{
-    /* background-color: bisque; */
+    
     height: 50%;
     color: white;
 
@@ -83,11 +83,9 @@ main{
     width: 45%;
     height: 95%;
     
-    /* background-color: aqua; */
-
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     
 }
 
@@ -109,13 +107,7 @@ main{
 }
 
 .card-type{
-    width: 5.938em;
-    height: 1.750em;
-    
-    background-color: #d9d9d9;
+    width: 3em;
+    height: 3em;
 }
 
-.pokemon-card-types{
-    display: flex;
-    justify-content: center;
-}
