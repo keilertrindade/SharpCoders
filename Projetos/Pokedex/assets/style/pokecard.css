@@ -12,7 +12,7 @@ main{
     height: 70%;
 
     display: flex;
-    
+    border: 1px solid white;
 }
 
 #pokemon-image img{
@@ -75,29 +75,28 @@ main{
 }
 
 .card-type{
-    width: 5.938em;
-    height: 1.750em;
-    
-    background-color: #d9d9d9;
+    width: 3em;
+    height: 3em;
 }
 
 #pokemon-stats{
     width: 32%;
     height: 70%;
-    /* background-color: antiquewhite; */
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 #pokemon-stats-informations{
-    background-color: #d9d9d9;
+    
     height: 47%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    border: 1px solid white;
 }
 
 .pokemon-stats-row{

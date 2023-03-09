@@ -41,8 +41,9 @@ arrayPokemonInformations.push(pokemonJson);
 return arrayPokemonInformations;
 }
 
-function openDetailsPage(pokemonName){
-    alert(pokemonName);
+function openDetailsPage(pokemonId){
+    console.log(pokemonId);
+    window.open("pokecard.html?pokemon=" + pokemonId);
 }
 
 function populatePokemonCards(){
@@ -72,11 +73,27 @@ function populatePokemonCards(){
                     }
 
                     cards[pokecard].addEventListener("click", function(){
-                        openDetailsPage(valor.name);
+                        openDetailsPage(valor.id);
                     })
             })
        }
     }   
 }
 
+function addingButtonFunctions(){
+    let surpriseButton = document.querySelector('#surprise-me-button');
+    let searchPokemonButton = document.querySelector('#search-pokemon-button');
+    surpriseButton.addEventListener("click", function(){
+        openDetailsPage(generateRandomPokemonID()); 
+    })
+
+    searchPokemonButton.addEventListener("click", function(){
+        let pokemonName = document.querySelector('#input-search-pokemon').value;
+        openDetailsPage(pokemonName);
+    })
+}
+
+
 populatePokemonCards()
+
+addingButtonFunctions()

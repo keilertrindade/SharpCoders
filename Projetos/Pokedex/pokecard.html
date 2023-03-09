@@ -6,61 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/style/style.css">
     <link rel="stylesheet" type="text/css" href="assets/style/pokecard.css">
+    <script src="script/pokecard.js" defer></script>
     <title>Pokedex</title>
 </head>
 <body>
     <header></header>
-    <main>
+    <main class="main-card-pokemon">
         <div id="pokemon-image">
-            <img src="assets/img/004.jpg" alt="">
+            <img src="" alt="">
         </div>
         <div id="pokemon-infos">
             <h2 id="pokemon-name">Nome Pokemon</h2>
-            <p id="numero-pokedex">Nº XXX</p>
+            <p id="numero-pokedex"></p>
             <p id="pokemon-description">It has a preference for hot things.
                  When it rains, steam is said to spout from the tip of its tail.</p>
                  
             <div id="pokemon-types-section">
                  <h4>Types</h4>
             <div id="pokemon-types">
-                        
-                        <div class="card-type"></div>
-                        <div class="card-type"></div>
             </div> 
         </div>
-        <div id="pokemon-weakness-section">
+<!--         <div id="pokemon-weakness-section">
             <h4>Weakness</h4>
             <div id="pokemon-weakness">
-                        <div class="card-type"></div>
-                        <div class="card-type"></div>
-                        <div class="card-type"></div>
             </div>
-        </div>
+        </div> -->
 
         </div>
         <div id="pokemon-stats">
             <div id="pokemon-stats-informations">
                 <div class="pokemon-stats-row">
-                    <div class="pokemon-stats-column">
+                    <div class="pokemon-stats-column" id="stats-altura">
                         <div class="stats-name">Altura</div>
-                        <div class="stats-value">0.6m</div>
+                        <div class="stats-value"></div>
                     </div>
-                    <div class="pokemon-stats-column">
+                    <div class="pokemon-stats-column" id="stats-categoria">
                         <div class="stats-name">Categoria</div>
                         <div class="stats-value">Lizard</div>
                     </div>
                 </div>
                 <div class="pokemon-stats-row">
-                    <div class="pokemon-stats-column">
+                    <div class="pokemon-stats-column" id="stats-peso">
                         <div class="stats-name">Peso</div>
-                        <div class="stats-value">3.5 Kg</div>
+                        <div class="stats-value"></div>
                     </div>
-                    <div class="pokemon-stats-column">
+                    <div class="pokemon-stats-column" id="stats-habilidade">
                         <div class="stats-name">Habilidade</div>
                         <div class="stats-value">Blaze</div>
                     </div>
                 </div>
-                <div class="pokemon-stats-row">
+<!--                 <div class="pokemon-stats-row">
                     <div class="pokemon-stats-column">
                         <div class="stats-name">Gênero</div>
                         <div class="stats-value-gender">
@@ -68,11 +63,10 @@
                                 <img src="assets/img/Mars Symbol.svg" alt="">                                                               
                             </div>
                             <div id="gender-female">
-                                <img src="assets/img/Female.svg" alt="">                                                                                               
-                            </div>
+                                <img src="assets/img/Female.svg" alt="">                                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div id="pokemon-stats-graph"></div>
         </div>
