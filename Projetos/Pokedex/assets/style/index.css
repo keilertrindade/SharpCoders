@@ -47,6 +47,13 @@ main{
     width: 3.438em;
     height: 3.125em;
     border-radius: 0.625em;
+    /* background-color: azure; */
+}
+
+#search-pokemon-button svg{
+    width: 3.438em;
+    height: 3.125em;
+    border-radius: 0.625em;
 }
 
 #surprise-me-button{

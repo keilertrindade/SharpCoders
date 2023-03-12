@@ -4,8 +4,14 @@ function generateRandomPokemonID(){
     return Math.floor(Math.random() * 1011);
 }
 
-function captlizePokemonName(pokemonName){
-    return pokemonName[0].toUpperCase() + pokemonName.substring(1);
+function captlizeName(name){
+
+    if(name.includes("-")){
+        let index = name.search("-")
+        return name[0].toUpperCase() + name.substring(1,index+1) + captlizeName(name.substring(index+1));
+    }
+
+    return name[0].toUpperCase() + name.substring(1);
 }
 
 function getInformationsPokemon(pokemonURL){
@@ -33,7 +39,6 @@ let pokemonURL = baseURL + generateRandomPokemonID();
 let pokemonJson = getInformationsPokemon(pokemonURL);
 arrayPokemonInformations.push(pokemonJson);
 
-
 pokemonURL = baseURL + generateRandomPokemonID();
 pokemonJson = getInformationsPokemon(pokemonURL);
 arrayPokemonInformations.push(pokemonJson);
@@ -42,7 +47,7 @@ return arrayPokemonInformations;
 }
 
 function openDetailsPage(pokemonId){
-    console.log(pokemonId);
+    
     window.open("pokecard.html?pokemon=" + pokemonId);
 }
 
@@ -54,11 +59,11 @@ function populatePokemonCards(){
         var cards = document.getElementsByClassName("pokemon-card");
         for(let pokecard = 0; pokecard < pokemonInformations.length; pokecard++){
             pokemonInformations[pokecard].then(valor => {
-                     cards[pokecard].querySelector('.pokemon-card-image').setAttribute('src',valor.sprites.other["official-artwork"].front_default);
+                    cards[pokecard].querySelector('.pokemon-card-image').setAttribute('src',valor.sprites.other["official-artwork"].front_default);
         
                     cards[pokecard].querySelector('.pokemon-card-pokedex-number').innerHTML = 'Número: '+ valor.id;
         
-                    cards[pokecard].querySelector('.pokemon-name').innerHTML =  captlizePokemonName(valor.name);
+                    cards[pokecard].querySelector('.pokemon-name').innerHTML =  captlizeName(valor.name);
                     
                     var divPokemonCardType = cards[pokecard].querySelector('.pokemon-card-types')
         
@@ -83,17 +88,26 @@ function populatePokemonCards(){
 function addingButtonFunctions(){
     let surpriseButton = document.querySelector('#surprise-me-button');
     let searchPokemonButton = document.querySelector('#search-pokemon-button');
+    let searchPokemonInput = document.querySelector('#input-search-pokemon');
     surpriseButton.addEventListener("click", function(){
         openDetailsPage(generateRandomPokemonID()); 
     })
 
-    searchPokemonButton.addEventListener("click", function(){
-        let pokemonName = document.querySelector('#input-search-pokemon').value;
+    searchPokemonButton.addEventListener("click", function(event){
+        let pokemonName = document.querySelector('#input-search-pokemon').value.trim().toLowerCase();
         openDetailsPage(pokemonName);
+        searchPokemonInput.value = "";
     })
+   
+    searchPokemonInput.addEventListener("keyup", function(event){
+        if(event.keyCode === 13){
+            searchPokemonButton.click();
+        }
+    })
+
 }
 
 
-populatePokemonCards()
 
+populatePokemonCards()
 addingButtonFunctions()

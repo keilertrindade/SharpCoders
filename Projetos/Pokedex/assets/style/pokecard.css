@@ -24,28 +24,24 @@ main{
 
 
 #pokemon-infos{
-    width: 32%;
+    width: 26%;
     height: 70%;
     color: white;
     
+    padding: 1%;
 
     display: flex;
     flex-direction: column;
-
     align-items: flex-start;
-    justify-content: space-evenly;
-}
-
-#pokemon-name{
+    justify-content: space-evenly; 
     
 }
 
 #pokemon-description{
-    width: 19.375em;
-    font-size: 1.250em;
+    font-size: 1.150em;   
 }
 
-#pokemon-types-section{
+#pokemon-types-section, #pokemon-imunes-section, #pokemon-weakness-section{
     display: flex;
     flex-direction: column;
     height: 20%;
@@ -53,25 +49,13 @@ main{
 
     align-items: space-around;
     justify-content: space-evenly;
-}
-
-#pokemon-types{
-    display: flex;
-}
-
-#pokemon-weakness-section{
-    display: flex;
-    flex-direction: column;
-    height: 20%;
-
-
-    align-items: space-around;
-    justify-content: space-evenly;
-}
-
-#pokemon-weakness{
-    display: flex;
     
+}
+
+#pokemon-types, #pokemon-weaknessess, #pokemon-imunes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card-type{
@@ -85,48 +69,74 @@ main{
     
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+   
 }
 
 #pokemon-stats-informations{
-    
+   
     height: 47%;
-
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-
     border: 1px solid white;
+    
+
+  
+/*  height: 47%;
+ background-color: orange;
+
+ display: grid;
+ grid-row: auto auto;
+ grid-column-gap: 20px;
+ grid-row-gap: 20px; */
+
+
 }
 
 .pokemon-stats-row{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
 
     height: 33%;
-    width: 100%;
-/*     background-color: rgb(211, 126, 23);
- */
+    width: 100%; */
+    
+    
+    padding:1em;
+      
+    display:flex;
+    flex-direction: column;
+    align-items:space-around;
+    justify-content:space-around;
+    
+    font-family:sans-serif;
+
+}
+.pokemon-stats-column{
+    height: 50%;
+    padding: 0.7em;
 }
 
 .stats-name{
     color: #fff;
     font-size: 1.3em;
     font-weight: bolder;
+    margin: 0.1em;
 }
 
 .stats-value{
     font-weight: bolder;
+    margin: 0.1em;
+    color: #1d1d1d;;
 }
 
 .stats-value-gender{
     display: flex;
 }
 
-
 #pokemon-stats-graph{
-    background-color: antiquewhite;
-    height: 47%;
+ border-radius: 0;
 }
+
+
 

@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/style/style.css">
     <link rel="stylesheet" type="text/css" href="assets/style/pokecard.css">
+    <link rel="icon" href="assets/img/icon/pokedex-icon-21.jpg">
     <script src="script/pokecard.js" defer></script>
-    <title>Pokedex</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <title>PokeDex</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <img src="assets/img/pokedexTitle.webp">
+    </header>
     <main class="main-card-pokemon">
         <div id="pokemon-image">
             <img src="" alt="">
@@ -18,19 +22,18 @@
         <div id="pokemon-infos">
             <h2 id="pokemon-name">Nome Pokemon</h2>
             <p id="numero-pokedex"></p>
-            <p id="pokemon-description">It has a preference for hot things.
-                 When it rains, steam is said to spout from the tip of its tail.</p>
+            <p id="pokemon-description">[Dado indisponível]</p>
                  
             <div id="pokemon-types-section">
                  <h4>Types</h4>
             <div id="pokemon-types">
             </div> 
         </div>
-<!--         <div id="pokemon-weakness-section">
-            <h4>Weakness</h4>
-            <div id="pokemon-weakness">
+        <div id="pokemon-weakness-section">
+            <h4>Weakenesses</h4>
+            <div id="pokemon-weaknessess">
             </div>
-        </div> -->
+        </div>
 
         </div>
         <div id="pokemon-stats">
@@ -42,7 +45,7 @@
                     </div>
                     <div class="pokemon-stats-column" id="stats-categoria">
                         <div class="stats-name">Categoria</div>
-                        <div class="stats-value">Lizard</div>
+                        <div class="stats-value">Dado indisponível</div>
                     </div>
                 </div>
                 <div class="pokemon-stats-row">
@@ -52,25 +55,15 @@
                     </div>
                     <div class="pokemon-stats-column" id="stats-habilidade">
                         <div class="stats-name">Habilidade</div>
-                        <div class="stats-value">Blaze</div>
                     </div>
                 </div>
-<!--                 <div class="pokemon-stats-row">
-                    <div class="pokemon-stats-column">
-                        <div class="stats-name">Gênero</div>
-                        <div class="stats-value-gender">
-                            <div id="gender-male">
-                                <img src="assets/img/Mars Symbol.svg" alt="">                                                               
-                            </div>
-                            <div id="gender-female">
-                                <img src="assets/img/Female.svg" alt="">                                         </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            <div id="pokemon-stats-graph"></div>
         </div>
+        <canvas id="pokemon-stats-graph"></canvas>
+    </div>
+    
     </main>
-    <footer></footer>
+    <footer>Copyright © 2023 Pokedex. Todos os direitos reservados.
+        Este site é um projeto de<a href="https://github.com/keilertrindade/" target="_blank">&nbsp;Keiler Trindade&nbsp;</a>e não está afiliado à The Pokemon Company.
+    </footer>
 </body>
 </html>
