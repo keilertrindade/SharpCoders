@@ -3,3 +3,9 @@
     margin: 10px 1px 10px auto;
     color: var(--white);
 }
+
+.autor{
+    display: flex;    
+    justify-content: space-between;
+    padding: 1rem;
+}

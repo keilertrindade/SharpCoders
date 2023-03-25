@@ -10,7 +10,7 @@ const Task = ({task, handleTaskClick, handleTaskDeletion}) => {
     const history = useHistory();
     const handleTaskDetailsClick = () => {
         history.push(`/${task.title}`);
-        // history.go(`/${task.title}`);
+       
     };
 
 
@@ -32,7 +32,7 @@ const Task = ({task, handleTaskClick, handleTaskDeletion}) => {
             </button>
 
             <button className="remove-task-button"
-             onClick={handleTaskDetailsClick}>
+             onClick={() => handleTaskDeletion(task.id)}>
                 <CgClose />
             </button>
         </div>
