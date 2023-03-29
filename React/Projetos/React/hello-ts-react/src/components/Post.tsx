@@ -5,13 +5,14 @@ import { Author } from "../model/Author";
 
 import styles from "./Post.module.css";
 import { Content as ContentModel } from "../model/Content";
+import { Avatar } from "./Avatar";
 
 
 interface PostProps{
     author: Author,
     contents: ContentModel[],
     time: Date,
-    onDelete(id:number): any
+    // onDelete(id:number): any
 }
 
 const naldo : Author = {
@@ -27,14 +28,16 @@ export function Post({ author, contents, time }: PostProps){
 
     return(
         <div className={styles.post}>
-            <div className={styles.author}>
-                <div>
-                    <img src={author.avatar} />
-                    <p>Autor: {author.name}</p>
-                    <p>Sobre: {author.about}</p>
+            <header className={styles.header}>
+                <div className={styles.author}>
+                    <Avatar  username={author.username}/>
+                    <div className={styles.authorInfo}>
+                        <strong>Autor: {author.name}</strong>
+                        <span>Sobre: {author.about}</span>
+                    </div>
                 </div>
                 <time title="27 de março de 2023 às 19:30" dateTime={time.toString()}>1 hour ago</time>
-            </div>
+                </header>
             <Content contents={contents} />           
             <button>responder</button>
             <button onClick={() => giveLike(likes+1)}>gostei: {likes}</button>

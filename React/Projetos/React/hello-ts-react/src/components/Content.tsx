@@ -1,10 +1,11 @@
 import styles from "./Content.module.css"
+import { Content as ContentModel } from "../model/Content";
 
 interface ContentProps {
-    
+    contents: ContentModel[]
 }
 
-export function Content({contents}){
+export function Content({contents} : ContentProps){
     
     console.log(contents);
     return(
@@ -18,8 +19,12 @@ export function Content({contents}){
                     return <img className={styles.image} src={content.imageLink} alt={content.alternativeText} />
                 else if(content.type === "link")
                     return(
-                        <a href="{content.linkValue}">{content.displayValue}</a>
-                        //<a href={content.linkValue}>{content.displayValue}</a>
+                        <a
+                         href={content.link}>
+                            { content.displayedText ?? content.link }
+                            
+                            </a>
+                        
                     )
             })}
         </div>

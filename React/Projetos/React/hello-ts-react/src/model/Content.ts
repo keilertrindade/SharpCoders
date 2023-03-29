@@ -4,8 +4,8 @@ export interface Content {
     message?: string,
     link?: string,
     displayedText?: string,
-    imageLink?: string | null,
-    alternativeText?: string | null,
+    imageLink?: string,
+    alternativeText?: string,
     testNullable?: string;
     
 }

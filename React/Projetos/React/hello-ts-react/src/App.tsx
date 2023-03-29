@@ -11,12 +11,14 @@ const posts = [
   "time": "2023-03-22 20:00",
   "author": {
     "name": "Keiler",
+    "username": "keilertrindade",
     "about": "Corinthiano"
 },
 "contents": [
   {"type": "title", "message": "Olá, cheguei"},
   {"type": "paragraph", "message": "Olá meu primeiro tweet"},
   {"type": "paragraph", "message": "Acabei de chegar por aqui"},
+  {"type": "link", "link": "#typescript"},
 ]
 },
 {
@@ -25,12 +27,14 @@ const posts = [
   "time": "2023-03-22 20:00",
   "author": {
     "name": "Hugo",
+    "username": "hgrafa",
     "about": "Flamenguista"
 },
 "contents": [
  {"type": "paragraph", "message": "Olá meu primeiro tweet"},
  {"type": "paragraph", "message": "Acabei de chegar por aqui"},
  {"type": "image", "imageLink": "https://www.github.com/hgrafa.png", "alternativeText": "Foto de perfil"},
+ {"type": "image", "imageLink": "https://www.github.com/hgrafa.png", "displayedText": "Acesse meu Github"},
 ]
 }
 ]
