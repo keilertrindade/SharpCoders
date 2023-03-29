@@ -1,0 +1,7 @@
+.image{
+    width: 4rem;
+}
+
+.content:first-child{
+    margin-left: 10px;
+}

@@ -1,5 +1,5 @@
-import {styles} from "./Header.module.css";
-import {Magnet } from "@phosphor-icons/react"
+import styles from "./Header.module.css";
+import {Magnet} from "@phosphor-icons/react";
 
 export function Header(){
     return(

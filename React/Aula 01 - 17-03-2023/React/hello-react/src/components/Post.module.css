@@ -1,11 +1,15 @@
 .post{
+    color: var(--white);
     background-color: var(--gray-600);
     margin: 10px 1px 10px auto;
-    color: var(--white);
 }
 
-.autor{
+.author{
     display: flex;    
     justify-content: space-between;
     padding: 1rem;
+}
+
+.content{
+
 }

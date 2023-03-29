@@ -1,18 +1,24 @@
 import { useState } from "react";
 import styles from "./Post.module.css";
+import { Content } from "./Content";
+
 //console.log(styles)
-export function Post({author, message}){
-    console.log(JSON.stringify(rest));
+export function Post({author, contents, time}){
+    // console.log(JSON.stringify(rest));
 
     const [likes, giveLike] = useState(0) 
 
     return(
         <div className={styles.post}>
             <div className={styles.author}>
-                <p>Autor: {author}</p>
-                <time dateTime={""}>1 hour ago</time>
+                <div>
+                    <img src={author.imgUrl} />
+                    <p>Autor: {author.name}</p>
+                    <p>Sobre: {author.about}</p>
+                </div>
+                <time dateTime={time}>1 hour ago</time>
             </div>
-            <h3>{message}</h3>           
+            <Content contents={contents} />           
             <button>responder</button>
             <button onClick={() => giveLike(likes+1)}>gostei: {likes}</button>
             <button>repostar</button>
