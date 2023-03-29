@@ -1,8 +1,17 @@
-export interface Author{
+/* export interface Author{
   nome: string,
   readonly username: string,
   about: string,
   vetor: string[]
+} */
+
+export interface Author{
+  name: string,
+  username: string,
+  about: string,
+  avatar?: string;
+
+
 }
 
 /* 

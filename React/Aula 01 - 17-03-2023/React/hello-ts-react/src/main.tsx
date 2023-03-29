@@ -8,6 +8,7 @@ const idade: number = 20;
 const salario: number = 1.3;
 const ativo: boolean = true;
 const vetor: number[] = [1,2,3,4];
+let nullableString : string | null | undefined;
 
 
 /* interface Author{
@@ -34,7 +35,7 @@ export interface Post {
 }
  */
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render( //
   <React.StrictMode>
     <App />
   </React.StrictMode>,

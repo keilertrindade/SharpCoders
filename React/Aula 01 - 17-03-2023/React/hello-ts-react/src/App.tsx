@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Magnet } from "@phosphor-icons/react";
+import { Header } from "./components/Header";
+import { Post } from "./components/Post";
 
-function App() {
-  const [count, setCount] = useState(0)
+import"./global.css";
 
+const posts = [
+{
+  'id': 1,
+  "imageUrl": "github.com/keilertrindade.png",
+  "time": "2023-03-22 20:00",
+  "author": {
+    "name": "Keiler",
+    "about": "Corinthiano"
+},
+"contents": [
+  {"type": "title", "message": "Olá, cheguei"},
+  {"type": "paragraph", "message": "Olá meu primeiro tweet"},
+  {"type": "paragraph", "message": "Acabei de chegar por aqui"},
+]
+},
+{
+  'id': 2,
+  "imageUrl": "github.com/hgrafa.png",
+  "time": "2023-03-22 20:00",
+  "author": {
+    "name": "Hugo",
+    "about": "Flamenguista"
+},
+"contents": [
+ {"type": "paragraph", "message": "Olá meu primeiro tweet"},
+ {"type": "paragraph", "message": "Acabei de chegar por aqui"},
+ {"type": "image", "imageLink": "https://www.github.com/hgrafa.png", "alternativeText": "Foto de perfil"},
+]
+}
+]
+
+const postConvertidos = `${posts}`
+
+
+export function App() {
+    
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+  <div>
+    <Header/>
+    {posts.map(post => {
+        
+        const obj =JSON.parse(JSON.stringify(post));
+        const {id, author, contents, time} = obj;
+        console.log(obj);
+        return (
+          <Post
+            key={id}
+            author={author}
+            contents={contents}
+            time={time}
+          />
+        )
+            
+      })}
+    
+  </div>
+);
 }
 
-export default App
+
