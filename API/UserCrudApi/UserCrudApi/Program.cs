@@ -1,19 +1,14 @@
-using HelloWorldApi.Domain;
 using Microsoft.EntityFrameworkCore;
+using UserCrudApi.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Add services to the container.
-
-var connectionString = builder.Configuration.GetConnectionString("HeroConnString");
-
-builder.Services.AddDbContext<HeroContext>(options => options.UseMySql(
-    connectionString: connectionString,
-    serverVersion: ServerVersion.AutoDetect(connectionString)
-)
-);
-
+var UserCrudConnectionString = builder.Configuration.GetConnectionString("UserCrudApiConnectionString");
+builder.Services.AddDbContext<UserCrudContext>(options => options.UseMySql(
+        connectionString: UserCrudConnectionString,
+        serverVersion: ServerVersion.AutoDetect(UserCrudConnectionString)
+    ));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
